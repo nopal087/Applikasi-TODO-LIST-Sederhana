@@ -25,19 +25,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Menginisialisasi elemen-elemen UI
         editTextTask = findViewById(R.id.editTextTask);
         buttonAdd = findViewById(R.id.buttonAdd);
         listViewTasks = findViewById(R.id.listViewTasks);
         Button buttonDeleteAll = findViewById(R.id.buttonDeleteAll);
 
-
+        // Membuat ArrayList untuk menyimpan tugas-tugas
         tasks = new ArrayList<>();
+
+        // Membuat adapter kustom untuk ListView
         tasksAdapter = new TaskAdapter(this, tasks);
         listViewTasks.setAdapter(tasksAdapter);
 
+        // Menambahkan OnClickListener pada tombol "Tambah Tugas"
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Mendapatkan teks dari EditText
                 String task = editTextTask.getText().toString().trim();
                 if (!task.isEmpty()) {
                     String numberedTask;
@@ -52,27 +57,32 @@ public class MainActivity extends AppCompatActivity {
                         taskNumber = lastNumber + 2; // Mengatur nomor untuk tugas berikutnya
                     }
 
+                    // Menambahkan tugas ke ArrayList
                     tasks.add(numberedTask);
+
+                    // Memberitahu adapter bahwa data telah berubah
                     tasksAdapter.notifyDataSetChanged();
+
+                    // Menghapus teks di dalam EditText setelah tugas ditambahkan
                     editTextTask.setText("");
                 }
             }
         });
 
-
-        // Tambahkan OnClickListener pada tombol "Hapus Semua"
+        // Menambahkan OnClickListener pada tombol "Hapus Semua"
         buttonDeleteAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tasks.clear(); // Menghapus semua tugas dari daftar
-                tasksAdapter.notifyDataSetChanged(); // Memperbarui tampilan ListView
+                // Menghapus semua tugas dari daftar
+                tasks.clear();
+
+                // Memberitahu adapter bahwa data telah berubah
+                tasksAdapter.notifyDataSetChanged();
 
                 // Mengatur ulang nomor tugas ke 1
                 taskNumber = 1;
             }
         });
-
-
     }
 }
 

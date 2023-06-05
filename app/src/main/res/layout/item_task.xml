@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:textAppearance="?android:textAppearanceMedium" />
+    <!-- TextView untuk menampilkan teks tugas -->
 
     <EditText
         android:id="@+id/editTextEditTask"
@@ -20,6 +21,7 @@
         android:layout_toStartOf="@id/buttonEdit"
         android:layout_toLeftOf="@id/buttonEdit"
         android:hint="Edit task" />
+    <!-- EditText untuk mengedit teks tugas -->
 
     <Button
         android:id="@+id/buttonEdit"
@@ -28,6 +30,7 @@
         android:layout_alignParentEnd="true"
         android:text="Edit"
         android:textSize="12sp" />
+    <!-- Tombol untuk melakukan pengeditan pada tugas -->
 
     <Button
         android:id="@+id/buttonDelete"
@@ -38,6 +41,6 @@
         android:layout_below="@id/buttonEdit"
         android:text="Delete"
         android:textSize="12sp" />
-
+    <!-- Tombol untuk menghapus tugas -->
 
 </RelativeLayout>
