@@ -1,1 +1,1 @@
-![Deskripsi Gambar](https://github.com/nopal087/Applikasi-TODO-LIST-Sederhana/blob/main/Screenshot%20(269).png){width=100%}
+![Sceranshot Projek](https://github.com/nopal087/Applikasi-TODO-LIST-Sederhana/raw/main/Screenshot%20(269).png)
