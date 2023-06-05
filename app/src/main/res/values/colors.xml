@@ -5,4 +5,10 @@
     <color name="deleteButtonColor">#FF0000</color>
     <color name="blue">#0000FF</color>
     <color name="red">#FF0000</color>
+    <color name="colorPrimaryDark">#FF000000</color>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccentDark">#D81B60</color>
+
+
 </resources>
